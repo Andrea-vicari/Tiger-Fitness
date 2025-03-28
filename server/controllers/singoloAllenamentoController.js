@@ -18,10 +18,10 @@ const vediTuttiAllenamenti = async (req, res)=> {
 const creaSingoloAllenamento = async (req, res)=> {
 
 
-    const {dataCreazione, nomeAllenamento, tipologia, difficoltà, ripetizioni, riposo, serie, carico, status, dataChiusura, registered} = req.body
+    const {dataCreazione, nomeAllenamento, tipologia, difficoltà, ripetizioni, riposo, serie, carico, istruzioni, status, dataChiusura, registered} = req.body
 
     try{
-        const singoloAllenamento = await allenamentiSingoli.create({dataCreazione, nomeAllenamento, tipologia, difficoltà, ripetizioni, riposo, serie, carico, status, dataChiusura, registered})
+        const singoloAllenamento = await allenamentiSingoli.create({dataCreazione, nomeAllenamento, tipologia, difficoltà, ripetizioni, riposo, serie, carico, istruzioni, status, dataChiusura, registered})
         res.status(200).json(singoloAllenamento)
     }
 
