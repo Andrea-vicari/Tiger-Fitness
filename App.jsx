@@ -7,15 +7,8 @@ import { useEffect } from 'react';
 
 
 import ScrollToTop from './Components/ScrollToTop';
-import HomepageOne from './pages/HomepageOne';
-import AboutUsPage from './pages/AboutUsPage';
-import ServicePage from './pages/Servicepage';
-import ContactPage from './pages/ContactPage';
-import BlogPage from './pages/BlogPage';
 import PrivacyPage from './pages/PrivacyPage';
 import FaqPage from './pages/FaqPage';
-import SinglePost from './pages/SinglePost';
-import SingleProject from './pages/SingleProject';
 import Error404 from './pages/Error404';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
@@ -34,7 +27,6 @@ import ElencoSchedeChiusePage from './pages/dashpages/ElencoSchedeChiusePage';
 import ElencoPrenotazioniUtentePage from './pages/dashpages/ElencoPrenotazioniUtentePage';
 import ElencoPrenotazioniTrainerPage from './pages/dashpages/ElencoPrenotazioniTrainerPage';
 import AgendaPage from './pages/dashpages/AgendaPage';
-import NutrizionePage from './pages/NutrizionePage';
 function App() {
 
   const {user} = UseAuthContext()
