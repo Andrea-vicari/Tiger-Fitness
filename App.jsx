@@ -51,14 +51,8 @@ function App() {
       <ScrollToTop>
         <Routes>
             <Route path="/" element={user ? <LoginPage /> : <Navigate to="/dashboardpage"/>} />
-            <Route path="/chisiamo" element={<AboutUsPage />} />
-            <Route path="/servizi" element={<ServicePage />} />
-            <Route path="/contatti" element={<ContactPage />} />
-            <Route path="/blogpage" element={<BlogPage />} />
             <Route path="/faqpage" element={<FaqPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
-            <Route path="/nutrizione" element={<NutrizionePage />} />
-            <Route path="/singlepost" element={<SinglePost />} />
             <Route path="/newtraining/:id" element={<NewTrainingPage />} />
             <Route path="/newbooking" element={user ? <NewBookingPage /> : <Navigate to="/login"/>} />
             <Route path="/schedatrainerpage/:id" element={<SchedaTrainerPage />} />
