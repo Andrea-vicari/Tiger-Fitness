@@ -33,7 +33,11 @@ const singoloAllenamentoSchema = new mongoose.Schema({
     carico:{
         type: Number,
         required: false
-    },
+    },    
+     istruzioni:{
+         type: String,
+        required: false
+     },
     status:{
         type: String,
         default:"APERTO",
