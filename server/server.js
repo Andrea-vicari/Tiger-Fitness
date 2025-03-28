@@ -48,7 +48,7 @@ const schedaAllenamentoUtenteRoute = require('./routes/schedaAllenamentoUtenteRo
 app.use('/api/scheda-allenamento-utente', schedaAllenamentoUtenteRoute)
 
 const usersRoutes = require('./routes/users');
-app.use(usersRoutes)
+app.use('/api/users', usersRoutes)
 
 /*
 
