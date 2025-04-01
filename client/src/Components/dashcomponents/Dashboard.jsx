@@ -39,7 +39,7 @@ function Dashboard() {
                     <img src={nuovoProdImg} className="img-fluid rounded mb-2"/>
                     </Link>
 
-                        <p>Accedi alla lista completa dei componenti presenti nel magazzino</p>
+                        <p>Accedi alla lista completa degli utenti</p>
                         <Link to="/elencoutenti" type="button" className="w-100 btn btn-lg btn-primary text-uppercase">Vai all'elenco</Link>
                     </div>
                     </div>
