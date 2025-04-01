@@ -56,8 +56,8 @@ function ListaUtenti() {
    
   }
 
-  const filteredUtenti = componenti.filter((product) =>
-    product.nome.toLowerCase().includes(nomeFilter.toLowerCase()) &&    
+  const filteredUtenti = utenti.filter((utente) =>
+    utente.nome.toLowerCase().includes(nomeFilter.toLowerCase()) &&    
   );
 
   const indexOfLastPost = currentPage * postsPerPage;
@@ -71,7 +71,7 @@ function ListaUtenti() {
     setCurrentPage(pageNumber);
   }
 
-  var totaleUtenti = componenti.length
+  var totaleUtenti = utenti.length
   console.log(totaleUtenti)
 
   return (
@@ -83,7 +83,7 @@ function ListaUtenti() {
       </div>
 
       <div className={"container-fluid mb-0 py-3" + " " + bgType + " " + textType}>
-        <h4 className="mx-2 mb-1" id='filtro_compon'>Filtra il componente</h4>
+        <h4 className="mx-2 mb-1" id='filtro_compon'>Filtra per nome utente</h4>
         <div className="row border-bottom">
         <div className="col-sm-6 py-2 pt-3">
         <input
@@ -93,27 +93,13 @@ function ListaUtenti() {
           value={nomeFilter}
           onChange={(e) => setNomeFilter(e.target.value)}
         />
-        <input
-          className="mb-2 mx-2 pb-1"
-          type="text"
-          placeholder="Inserisci la marca"
-          value={marcaFilter}
-          onChange={(e) => setMarcaFilter(e.target.value)}
-        />
-        <input
-          className="mb-2 mx-2 pb-1"
-          type="text"
-          placeholder="Inserisci il modello"
-          value={modelloFilter}
-          onChange={(e) => setModelloFilter(e.target.value)}
-        />
 
         <button className='btn btn-outline-info py-1 rounded-0' onClick={()=>resettaRicerca()}>RESET</button>
         </div>
         <div className="col-sm-2 d-none d-sm-block">
         <div className='py-4'>
           <label>
-          Componenti per pagina:
+          Utenti per pagina:
           <select value={postsPerPage}
             onChange={e => setPostsPerPage(e.target.value)}
             className='mx-3' name="compPerPage">
@@ -130,7 +116,7 @@ function ListaUtenti() {
           <div className="col-sm-2 d-none d-sm-flex justify-content-end">
             <div className='pt-3'>
 
-              <ScaricaListaCompCSV componenti={componenti}/>
+              <ScaricaListaCompCSV utenti={utenti}/>
 
             </div>
           </div>
@@ -170,10 +156,10 @@ function ListaUtenti() {
                 </tr>
               </thead>
               <tbody>
-                <Lista componenti={currentPosts} loading={loading} />
+                <Lista utenti={currentPosts} loading={loading} />
               </tbody>
             </table>
-            <Pagination length={componenti.length} postsPerPage={postsPerPage} handlePagination={handlePagination} currentPage={currentPage} />
+            <Pagination length={utenti.length} postsPerPage={postsPerPage} handlePagination={handlePagination} currentPage={currentPage} />
           </div>
         </div>
 
