@@ -8,7 +8,7 @@ import logo from "../../assets/images/tiger-fitness-logo.svg"
 import { UseAuthContext } from "../../hooks/UseAuthContext";
 
 
-function NavbarFixedTop() {
+function DashNav() {
 
   // Dark theme logics
   const themeType = useSelector((state) => state.counter.value) 
@@ -68,4 +68,4 @@ function NavbarFixedTop() {
   )
 }
 
-export default NavbarFixedTop
+export default DashNav
