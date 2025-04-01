@@ -23,7 +23,7 @@ function Dashboard() {
     <div className={"container-fluid pb-5 pt-5"+ " " + bgType + " " + textType} id='pricing'>
         <div className='w-75 mx-auto'>
         <h1 className="section-title pt-5">Dashboard</h1>
-        <p className='mb-5 text-center fs-3 lh-1 d-none d-sm-block'>Pagina principale dove accedere alle sezioni del gestionale, per consultare i componenti, aggiungere componenti, consultare il magazzino ed i componenti divisi per categoria</p>
+        <p className='mb-5 text-center fs-3 lh-1 d-none d-sm-block'>Lorem Ipsum dolor sit amet dolor</p>
         </div>
 
 
@@ -32,7 +32,7 @@ function Dashboard() {
                 <div className="col">
                 <div className={"card mb-4 rounded-3 shadow-sm border-primary" + " " + bgType + " " + textType}>
                 <div className="card-header py-3 text-bg-primary">
-                        <h4 className="my-0 fw-normal">Elenco componenti</h4>
+                        <h4 className="my-0 fw-normal">Elenco utenti</h4>
                     </div>
                     <div className="card-body">
                     <Link to="/elencocomponenti">
