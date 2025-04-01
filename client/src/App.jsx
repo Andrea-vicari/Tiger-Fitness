@@ -12,7 +12,7 @@ import NewPassword from './pages/NewPassword';
 import SentPassword from './pages/SentPassword';
 import DashboardPage from './pages/dashpages/DashboardPage';
 import NuovoComponentePage from './pages/dashpages/NuovoComponentePage';
-import ElencoComponentiPage from './pages/dashpages/ElencoComponentiPage';
+import ElencoUtentiPage from './pages/dashpages/ElencoUtentiPage';
 import CancellaComponentePage from './pages/dashpages/CancellaComponentePage';
 import ModificaComponentePage from './pages/dashpages/ModificaComponentePage';
 import ConsultaCategoriePage from './pages/dashpages/ConsultaCategoriePage';
@@ -35,8 +35,8 @@ function App() {
             <Route path="/login" element={user ? <Navigate to="/dashboardpage"/> : <LoginPage />} />
             <Route path="/register" element={!user ? <RegisterPage/> : <Navigate to="/login"/>}/>
             <Route path="/dashboardpage" element={user ? <DashboardPage /> : <Navigate to="/login"/>} />
-		        <Route path="/cancellacomponente/:id" element={<CancellaComponentePage/>} />
-            <Route path="/elencocomponenti" element={user ? <ElencoComponentiPage /> : <Navigate to="/login"/>} />
+	    <Route path="/cancellacomponente/:id" element={<CancellaComponentePage/>} />
+            <Route path="/elencoutenti" element={user ? <ElencoUtentiPage /> : <Navigate to="/login"/>} />
 
             <Route path="/consultacategorie" element={user ? <ConsultaCategoriePage /> : <Navigate to="/login"/>} />
             <Route path="/consultamagazzino" element={user ? <ConsultaMagazzinoPage /> : <Navigate to="/login"/>} />
