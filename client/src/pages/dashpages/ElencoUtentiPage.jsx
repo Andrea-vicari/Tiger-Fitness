@@ -4,7 +4,7 @@ import Navbar from '../../Components/Common/DashNav';
 import ListaComponenti from '../../Components/dashcomponents/ListaUtenti';
 import ScaricaListaCompCSV from '../../Components/dashcomponents/ScaricaListaCompCSV';
 
-function ElencoComponentiPage() {
+function ElencoUtentiPage() {
   return (
     <>
     <Navbar />
@@ -14,5 +14,5 @@ function ElencoComponentiPage() {
   )
 }
 
-export default ElencoComponentiPage
+export default ElencoUtentiPage
 
