@@ -1,4 +1,4 @@
-import React from 'react'
+tenteimport React from 'react'
 import { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
@@ -142,17 +142,9 @@ function ListaUtenti() {
               <thead className='text-uppercase'>
                 <tr>
                   <th scope="col">Immagine</th>
-                  <th scope="col">Codice</th>
-                  <th scope="col">Nome</th>
-                  <th scope="col">Cat</th>
-                  <th scope="col">Condizione</th>
-                  <th scope="col">Marca</th>
-                  <th scope="col">Modello</th>
-                  <th scope="col">Versione</th>
-                  <th scope="col">Anno</th>
-                  <th scope="col">Ubicazione</th>
-                  <th scope="col">Peso</th>
-                  <th scope="col">Gestisci</th>
+                  <th scope="col">Nome Utente</th>
+                  <th scope="col">E-Mail</th>
+                  <th scope="col">Registrato il:</th>
                 </tr>
               </thead>
               <tbody>
