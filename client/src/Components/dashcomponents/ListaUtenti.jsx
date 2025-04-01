@@ -23,7 +23,7 @@ function ListaUtenti() {
   const [loading, setLoading] = useState(true)
   // initialize the error state as null
   const [error, setError] = useState(null)
-  const [componentiFiltrati, setComponentiFiltrati] = useState([])
+  const [utentiFiltrati, setUtentiFiltrati] = useState([])
   const [marcaFilter, setMarcaFilter] = useState('');
   const [modelloFilter, setModelloFilter] = useState('');
   const [nomeFilter, setNomeFilter] = useState('');
@@ -34,11 +34,11 @@ function ListaUtenti() {
   useEffect(() => {
     fetch('http://localhost:8080/api/users')
       .then(response => response.json())
-      .then(componentiDalServer => {
+      .then(utentiDalServer => {
         console.log("*****")
-        console.log(componentiDalServer)
-        setComponenti(componentiDalServer)
-        setComponentiFiltrati(componentiDalServer)
+        console.log(utentiDalServer)
+        setUtenti(utentiDalServer)
+        setUtentiFiltrati(utentiDalServer)
       })
       .catch(err => {
         console.log(err)
