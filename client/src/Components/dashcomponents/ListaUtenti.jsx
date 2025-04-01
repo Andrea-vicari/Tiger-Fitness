@@ -58,8 +58,8 @@ function ListaUtenti() {
   }
 
   const filteredUtenti = utenti.filter((utente) =>
-    utente.nome.toLowerCase().includes(nomeFilter.toLowerCase()) &&
-  );
+    utente.username.toLowerCase().includes(nomeFilter.toLowerCase())
+  )
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;

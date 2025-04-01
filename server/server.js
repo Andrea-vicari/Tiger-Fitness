@@ -24,7 +24,8 @@ console.log(process.cwd())
 app.use(cors(
     {
         // Use this in production (DO NOT PUT FINAL SLASH!!) //
-        origin: ["https://pulsefit-client.vercel.app"],
+        //origin: ["https://pulsefit-client.vercel.app"],
+        origin: ["http://localhost:5173"],
         methods: ["POST", "GET", "PUT", "PATCH"],
         credentials: true
 
@@ -46,7 +47,7 @@ app.use('/api/singolo-allenamento', singoloAllenamentoRoute)
 const schedaAllenamentoUtenteRoute = require('./routes/schedaAllenamentoUtenteRoute');
 app.use('/api/scheda-allenamento-utente', schedaAllenamentoUtenteRoute)
 const usersRoutes = require('./routes/users');
-app.use(usersRoutes)
+app.use('/api/users', usersRoutes)
 
 /*
 
