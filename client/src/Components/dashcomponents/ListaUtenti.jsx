@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
 import Lista from './Lista'
 import ScaricaListaCompCSV from './ScaricaListaCompCSV';
-// import Etichetta from './Etichetta';
 import Pagination from './Pagination'
 
 
