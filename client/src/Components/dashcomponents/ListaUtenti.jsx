@@ -24,9 +24,8 @@ function ListaUtenti() {
   // initialize the error state as null
   const [error, setError] = useState(null)
   const [utentiFiltrati, setUtentiFiltrati] = useState([])
-  const [marcaFilter, setMarcaFilter] = useState('');
-  const [modelloFilter, setModelloFilter] = useState('');
   const [nomeFilter, setNomeFilter] = useState('');
+
 
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(5);
@@ -53,20 +52,17 @@ function ListaUtenti() {
   }, [])
 
   const resettaRicerca = () =>{
-    setMarcaFilter('')
-    setModelloFilter('')
     setNomeFilter('')
+   
   }
 
-  const filteredProducts = componenti.filter((product) =>
-    product.marca.toLowerCase().includes(marcaFilter.toLowerCase()) &&
-    product.modello.toLowerCase().includes(modelloFilter.toLowerCase()) &&
-    product.nome.toLowerCase().includes(nomeFilter.toLowerCase())
+  const filteredUtenti = componenti.filter((product) =>
+    product.nome.toLowerCase().includes(nomeFilter.toLowerCase()) &&    
   );
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = filteredProducts.slice(indexOfFirstPost, indexOfLastPost);
+  const currentPosts = filteredUtenti.slice(indexOfFirstPost, indexOfLastPost);
 
   console.log("currentPosts")
   console.log(currentPosts)
@@ -75,14 +71,14 @@ function ListaUtenti() {
     setCurrentPage(pageNumber);
   }
 
-  var totaleComponenti = componenti.length
-  console.log(totaleComponenti)
+  var totaleUtenti = componenti.length
+  console.log(totaleUtenti)
 
   return (
     <>
       <div className='container-fluid pt-1 mt-5 bg-login d-none d-sm-block'>
         <div className='container text-center mt-5 pb-1'>
-          <h1 className='display-2 text-white text-uppercase'>Elenco Componenti</h1>
+          <h1 className='display-2 text-white text-uppercase'>Elenco Utenti</h1>
         </div>
       </div>
 
