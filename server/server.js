@@ -45,19 +45,21 @@ const singoloAllenamentoRoute = require('./routes/singoloAllenamentoRoute');
 app.use('/api/singolo-allenamento', singoloAllenamentoRoute)
 const schedaAllenamentoUtenteRoute = require('./routes/schedaAllenamentoUtenteRoute');
 app.use('/api/scheda-allenamento-utente', schedaAllenamentoUtenteRoute)
+const usersRoutes = require('./routes/users');
+app.use(usersRoutes)
 
 /*
-const usersRoutes = require('./routes/users');
+
 const bookingsRoutes = require('./routes/bookings');
 // const imagesRoutes = require('./routes/images');
 
 app.use(workoutsRoutes)
-app.use(usersRoutes)
+
 app.use(bookingsRoutes)
 // app.use(imagesRoutes)
 
 
-app.use('/api/users', usersRoutes)
+
 app.use('/api/bookings', bookingsRoutes)
 // app.use('/api/images', imagesRoutes)
 */

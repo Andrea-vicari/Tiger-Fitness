@@ -1,4 +1,5 @@
-tenteimport React from 'react'
+
+import React from 'react'
 import { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
@@ -53,11 +54,11 @@ function ListaUtenti() {
 
   const resettaRicerca = () =>{
     setNomeFilter('')
-   
+
   }
 
   const filteredUtenti = utenti.filter((utente) =>
-    utente.nome.toLowerCase().includes(nomeFilter.toLowerCase()) &&    
+    utente.nome.toLowerCase().includes(nomeFilter.toLowerCase()) &&
   );
 
   const indexOfLastPost = currentPage * postsPerPage;
