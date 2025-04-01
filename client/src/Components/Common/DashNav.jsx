@@ -1,5 +1,6 @@
 import React from 'react'
 import MenuTrainer from '../Common/MenuTrainer'
+import MenuUtente from '../Common/MenuUtente'
 import LogMenu from '../Common/LogMenu';
 import { useSelector } from 'react-redux'
 import { Link } from "react-router-dom";
@@ -10,12 +11,22 @@ import { UseAuthContext } from "../../hooks/UseAuthContext";
 function NavbarFixedTop() {
 
   // Dark theme logics
-  const themeType = useSelector((state) => state.counter.value)
+  const themeType = useSelector((state) => state.counter.value) 
 
   let navType, bgType;
 
   themeType == "ligth" ? bgType = "bg-ligth" : bgType = "bg-dark"
   themeType == "ligth" ? navType = "navbar-light" : navType = "navbar-dark"
+
+  // 
+  const {user} = UseAuthContext()
+
+  const role = useSelector((state) => state.setRole.value)
+
+
+  console.log("role FROM THE NAVBAR")
+  console.log(role)
+
 
 
   return (
@@ -36,7 +47,14 @@ function NavbarFixedTop() {
                 <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
               <div className="offcanvas-body">
+                
+              {role == "admin" &&
               <MenuTrainer />
+              }
+              {role == "user" &&
+              <MenuUtente />
+              }
+              
               <LogMenu />
 
               </div>
