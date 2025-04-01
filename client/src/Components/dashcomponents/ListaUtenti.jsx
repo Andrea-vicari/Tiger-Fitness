@@ -18,7 +18,7 @@ function ListaUtenti() {
   themeType == "ligth" ? textType = "" : textType = "text-bg-dark"
   themeType == "ligth" ? tableType = "table-ligth" : tableType = "table-dark"
 
-  const [componenti, setComponenti] = useState([])
+  const [utenti, setUtenti] = useState([])
   // initialize the loading state as true
   const [loading, setLoading] = useState(true)
   // initialize the error state as null
@@ -32,7 +32,7 @@ function ListaUtenti() {
   const [postsPerPage, setPostsPerPage] = useState(5);
 
   useEffect(() => {
-    fetch('https://autoparts-flame.vercel.app/api/componenti')
+    fetch('http://localhost:8080/api/users')
       .then(response => response.json())
       .then(componentiDalServer => {
         console.log("*****")
