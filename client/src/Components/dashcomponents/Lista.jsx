@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import LigthBox from './LigthBox';
 
 
-const Lista = ({ componenti, loading }) => {
+const Lista = ({ utenti, loading }) => {
 
     console.log("== &&&& ===0")
-    console.log(componenti)
+    console.log(utenti)
 
 
     if (loading) {
@@ -19,15 +19,11 @@ const Lista = ({ componenti, loading }) => {
     return (
         <>
 
-            {componenti.length ===0 ?
+            {utenti.length ===0 ?
               <h2 className='text-center pt-3 pb-3'>Nessun componente trovato</h2>
-            : componenti.map((data, index) => (
+            : utenti.map((data, index) => (
                 <tr key={index}>
                 <td><LigthBox immagine={data.file}/></td>
-                <td className='pt-3'>
-                  <a href={'https://www.google.com/search?q=' + data.codice} target="_blank">{data.codice}</a>
-
-                </td>
                 <td className='pt-3'>{data.nome}</td>
                 <td className='pt-3'>{data.categoria}</td>
                 <td className='pt-3'>{data.condizione}</td>
