@@ -35,7 +35,7 @@ function App() {
   });
   }
 
-  if(user !== null && user.user_id == "6654d132c3e78209fb9b37da"){
+  if(user !== null && user.user_id == "6707cf4ef7add3e58858b877"){
     useEffect(() => {
     dispatchRole(admin())
   });
